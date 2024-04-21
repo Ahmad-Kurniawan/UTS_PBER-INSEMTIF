@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Insemtif</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="strSKP1"><b>Sikap [20%]</b> \n-Penampilan/etika\n-Cara menjawab pertanyaan\n-Kecapkapan dalam menggunakan alat bantu</string>
+    <string name="strSKP2"><b>Penguasaan Materi [40%]</b> \n-Bahan presentasi \n-Ketepatan waktu \n-Pemahaman terhadap mtaeri \n-Pemahaman terhadap materi pendukung</string>
+    <string name="strSKP3"><b>Isi Laporan [40%]</b> \n-Format dan kualitas laporan</string>
+</resources>

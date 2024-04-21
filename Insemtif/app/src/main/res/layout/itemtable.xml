@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:stretchColumns="*">
+
+        <!-- Table Row -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Table Cell 1 -->
+            <TextView
+                android:id="@+id/waktu"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Waktu"
+                android:textStyle="bold"
+                android:gravity="center_horizontal" />
+
+            <!-- Table Cell 2 -->
+            <TextView
+                android:id="@+id/tempat"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Tempat"
+                android:textStyle="bold"
+                android:gravity="center_horizontal" />
+
+            <!-- Table Cell 2 -->
+            <TextView
+                android:id="@+id/keterangan"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Keterangan"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"/>
+            <!-- Add more cells as needed -->
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="16dp"
+    tools:context=".DaftarMahasiswaKPActivity">
+
+    <TextView
+        android:id="@+id/tv4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Daftar Mahasiswa \n Kerja Praktik"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:hint="Cari"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="end"
+        android:drawableEnd="@drawable/baseline_search_24"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/black" />
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:stretchColumns="*">
+
+        <!-- Table Row -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Table Cell 1 -->
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Nama"
+                android:textStyle="bold"
+                android:gravity="center_horizontal" />
+
+            <!-- Table Cell 2 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Status"
+                android:textStyle="bold"
+                android:gravity="center_horizontal" />
+
+        </TableRow>
+    </TableLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/black" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/itemslist" />
+</LinearLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AkunFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/darkBlue">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circleImageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginVertical="16dp"
+                android:src="@drawable/noimage"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Abdul Wahid"
+                android:maxLines="2"
+                android:gravity="center_horizontal"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/circleImageView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView" />
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="23635725"
+                android:maxLines="2"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                app:layout_constraintEnd_toStartOf="@+id/circleImageView"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/tv1" />
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Dospem/Dosuji"
+                android:maxLines="2"
+                android:gravity="center_horizontal"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/circleImageView"
+                app:layout_constraintTop_toTopOf="@+id/tv1" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center_horizontal"
+        android:text="Jadwal Seminar"
+        android:textSize="25sp"
+        android:textStyle="bold|italic" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:stretchColumns="*">
+
+    <!-- Table Row -->
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Table Cell 1 -->
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Waktu"
+            android:textStyle="bold"
+            android:gravity="center_horizontal" />
+
+        <!-- Table Cell 2 -->
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Tempat"
+            android:textStyle="bold"
+            android:gravity="center_horizontal" />
+
+        <!-- Table Cell 2 -->
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Keterangan"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"/>
+        <!-- Add more cells as needed -->
+    </TableRow>
+    </TableLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvlistjadwal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/itemtable" />
+</LinearLayout>
